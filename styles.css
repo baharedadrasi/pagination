@@ -49,6 +49,7 @@ Variables
 Global Styles
 =============
 */
+*,
 ::after,
 ::before {
   margin: 0;
@@ -131,4 +132,84 @@ Pagination
   width: 8rem;
   height: 0.25rem;
   margin: 0 auto;
+}
+.followers {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 5rem auto;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+.card {
+  background: var(--clr-white);
+  text-align: center;
+  padding: 2rem 3.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--dark-shadow);
+}
+.card img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.card h4 {
+  color: var(--clr-grey-5);
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+}
+.btn {
+  background: var(--clr-primary-5);
+  padding: 0.35rem 0.75rem;
+  color: var(--clr-white);
+  letter-spacing: 1.6px;
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  cursor: pointer;
+  border-color: transparent;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.page-btn {
+  border: none;
+  background: var(--clr-primary-7);
+  color: var(--clr-grey-1);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.prev-btn,
+.next-btn {
+  text-transform: capitalize;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  color: var(--clr-grey-1);
+  font-weight: bold;
+  letter-spacing: var(--spacing);
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.active-btn {
+  background: var(--clr-primary-1);
+  color: var(--clr-white);
+}
+@media screen and (min-width: 775px) {
+  .btn-container {
+    margin: 0 auto;
+    max-width: 700px;
+  }
 }
